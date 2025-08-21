@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "baseUrl": ".",
+    "paths": {
+      "@harry-potter-rag/trpc-shared": ["../packages/trpc-shared/src/index.ts"]
+    },
+    "types": ["bun-types"],
+    "esModuleInterop": true
+  }
+}
