@@ -1,8 +1,0 @@
-{
-    "name": "harry-potter-rag-monorepo",
-    "private": true,
-    "type": "module",
-    "workspaces": [
-        "webapp"
-    ]
-}
