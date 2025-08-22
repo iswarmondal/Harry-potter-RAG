@@ -1,9 +1,6 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import { Input } from '$lib/components/ui/input';
-	import { trpc } from '$lib';
-
-	import type { AskOutput } from '@harry-potter-rag/trpc-shared';
 	import { Separator } from '$lib/components/ui/separator';
 	import {
 		Collapsible,
@@ -11,7 +8,7 @@
 		CollapsibleTrigger
 	} from '$lib/components/ui/collapsible';
 	import { ChevronDown } from '@lucide/svelte';
-	type AskResult = AskOutput;
+	type AskResult = { answer: string; sources: Array<{ id: string; score: number; text?: string }> };
 
 	let question = $state('');
 	let loading = $state(false);
@@ -28,7 +25,16 @@
 		if (!q) return;
 		loading = true;
 		try {
-			const res = await trpc.ask.mutate({ prompt: q, topK: 4 });
+			const resp = await fetch('/api/ask', {
+				method: 'POST',
+				headers: { 'content-type': 'application/json' },
+				body: JSON.stringify({ prompt: q, topK: 4 })
+			});
+			if (!resp.ok) {
+				const err = await resp.json().catch(() => ({}));
+				throw new Error(err?.error ?? 'Request failed');
+			}
+			const res: AskResult = await resp.json();
 			answer = res?.answer ?? null;
 			sources = res?.sources ?? [];
 		} catch (err: any) {

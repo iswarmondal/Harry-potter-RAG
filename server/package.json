@@ -4,7 +4,7 @@
     "dev": "bun run --hot src/index.ts"
   },
   "dependencies": {
-    "@harry-potter-rag/trpc-shared": "*",
+    "@harry-potter-rag/trpc-shared": "workspace:*",
     "@hono/trpc-server": "^0.4.0",
     "@llamaindex/openai": "^0.4.17",
     "@llamaindex/qdrant": "^0.1.30",

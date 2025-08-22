@@ -9,10 +9,8 @@
       "version": "0.0.1",
       "dependencies": {
         "@trpc/server": "^11.5.0",
-        "zod": "^4.0.17",
-      },
-      "devDependencies": {
         "typescript": "^5.0.0",
+        "zod": "^4.0.17",
       },
     },
     "server": {
@@ -37,9 +35,11 @@
       "name": "webapp",
       "version": "0.0.1",
       "dependencies": {
-        "@harry-potter-rag/trpc-shared": "*",
-        "@trpc/client": "^11.5.0",
+        "@llamaindex/openai": "^0.4.17",
+        "@qdrant/js-client-rest": "^1.15.1",
+        "llamaindex": "^0.11.27",
         "mode-watcher": "^1.1.0",
+        "zod": "^4.0.17",
       },
       "devDependencies": {
         "@eslint/compat": "^1.2.5",
@@ -324,8 +324,6 @@
     "@tailwindcss/typography": ["@tailwindcss/typography@0.5.16", "", { "dependencies": { "lodash.castarray": "^4.4.0", "lodash.isplainobject": "^4.0.6", "lodash.merge": "^4.6.2", "postcss-selector-parser": "6.0.10" }, "peerDependencies": { "tailwindcss": ">=3.0.0 || insiders || >=4.0.0-alpha.20 || >=4.0.0-beta.1" } }, "sha512-0wDLwCVF5V3x3b1SGXPCDcdsbDHMBe+lkFzBRaHeLvNi+nrrnZ1lA18u+OTWO8iSWU2GxUOCvlXtDuqftc1oiA=="],
 
     "@tailwindcss/vite": ["@tailwindcss/vite@4.1.12", "", { "dependencies": { "@tailwindcss/node": "4.1.12", "@tailwindcss/oxide": "4.1.12", "tailwindcss": "4.1.12" }, "peerDependencies": { "vite": "^5.2.0 || ^6 || ^7" } }, "sha512-4pt0AMFDx7gzIrAOIYgYP0KCBuKWqyW8ayrdiLEjoJTT4pKTjrzG/e4uzWtTLDziC+66R9wbUqZBccJalSE5vQ=="],
-
-    "@trpc/client": ["@trpc/client@11.5.0", "", { "peerDependencies": { "@trpc/server": "11.5.0", "typescript": ">=5.7.2" } }, "sha512-32oH+KOAdo73jJKjU9tyG+vCjID6A28NgXwUNr691O5HjpF5yyTX51Zzyee8YtGzU89Nw/drCHdfA4gD7BN2eg=="],
 
     "@trpc/server": ["@trpc/server@11.5.0", "", { "peerDependencies": { "typescript": ">=5.7.2" } }, "sha512-0IBtkmUCeO2ycn4K45/cqsujnlCQrSvkCo7lFDpg3kGMIPiLyLRciID5IiS7prEjRjeITa+od2aaHTIwONApVw=="],
 

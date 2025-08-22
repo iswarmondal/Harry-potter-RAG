@@ -45,8 +45,10 @@
 		"vite-plugin-devtools-json": "^1.0.0"
 	},
 	"dependencies": {
-		"@trpc/client": "^11.5.0",
 		"mode-watcher": "^1.1.0",
-		"@harry-potter-rag/trpc-shared": "*"
+		"@llamaindex/openai": "^0.4.17",
+		"@qdrant/js-client-rest": "^1.15.1",
+		"llamaindex": "^0.11.27",
+		"zod": "^4.0.17"
 	}
 }
